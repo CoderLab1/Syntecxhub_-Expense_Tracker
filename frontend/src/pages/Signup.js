@@ -54,43 +54,62 @@ function Signup() {
         }
     }
     return (
-        <div className='container'>
-            <h1>Signup</h1>
+        <div className="container">
+            <h1>Create Account ✨</h1>
+            <p style={{ marginBottom: "20px", color: "#64748b", fontSize: "14px" }}>
+                Join us and start your journey
+            </p>
+
             <form onSubmit={handleSignup}>
                 <div>
-                    <label htmlFor='name'>Name</label>
+                    <label htmlFor="name">Full Name</label>
                     <input
                         onChange={handleChange}
-                        type='text'
-                        name='name'
+                        type="text"
+                        name="name"
                         autoFocus
-                        placeholder='Enter your name...'
+                        placeholder="Enter your name..."
                         value={signupInfo.name}
                     />
                 </div>
+
                 <div>
-                    <label htmlFor='email'>Email</label>
+                    <label htmlFor="email">Email</label>
                     <input
                         onChange={handleChange}
-                        type='email'
-                        name='email'
-                        placeholder='Enter your email...'
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email..."
                         value={signupInfo.email}
                     />
                 </div>
+
                 <div>
-                    <label htmlFor='password'>Password</label>
+                    <label htmlFor="password">Password</label>
                     <input
                         onChange={handleChange}
-                        type='password'
-                        name='password'
-                        placeholder='Enter your password...'
+                        type="password"
+                        name="password"
+                        placeholder="Enter your password..."
                         value={signupInfo.password}
                     />
                 </div>
-                <button type='submit'>Signup</button>
-                <span>Already have an account ?
-                    <Link to="/login">Login</Link>
+
+                <button type="submit">Create Account</button>
+
+                <span style={{ marginTop: "10px", fontSize: "14px", color: "#475569" }}>
+                    Already have an account?
+                    <Link
+                        to="/login"
+                        style={{
+                            marginLeft: "6px",
+                            color: "#2563eb",
+                            fontWeight: "500",
+                            textDecoration: "none"
+                        }}
+                    >
+                        Login
+                    </Link>
                 </span>
             </form>
             <ToastContainer />

@@ -57,36 +57,56 @@ function Login() {
     }
 
     return (
-        <div className='container'>
-            <h1>Login</h1>
-            <form onSubmit={handleLogin}>
-                <div>
-                    <label htmlFor='email'>Email</label>
-                    <input
-                        onChange={handleChange}
-                        type='email'
-                        name='email'
-                        placeholder='Enter your email...'
-                        value={loginInfo.email}
-                    />
-                </div>
-                <div>
-                    <label htmlFor='password'>Password</label>
-                    <input
-                        onChange={handleChange}
-                        type='password'
-                        name='password'
-                        placeholder='Enter your password...'
-                        value={loginInfo.password}
-                    />
-                </div>
-                <button type='submit'>Login</button>
-                <span>Does't have an account ?
-                    <Link to="/signup">Signup</Link>
-                </span>
-            </form>
-            <ToastContainer />
+<div className="container">
+    <h1>Welcome Back 👋</h1>
+    <p style={{ marginBottom: "20px", color: "#64748b", fontSize: "14px" }}>
+        Login to continue to your account
+    </p>
+
+    <form onSubmit={handleLogin}>
+        <div>
+            <label htmlFor="email">Email</label>
+            <input
+                onChange={handleChange}
+                type="email"
+                name="email"
+                placeholder="Enter your email..."
+                value={loginInfo.email}
+            />
         </div>
+
+        <div>
+            <label htmlFor="password">Password</label>
+            <input
+                onChange={handleChange}
+                type="password"
+                name="password"
+                placeholder="Enter your password..."
+                value={loginInfo.password}
+            />
+        </div>
+
+        <button type="submit">Login</button>
+
+        <span style={{ marginTop: "10px", fontSize: "14px", color: "#475569" }}>
+            Don’t have an account?
+            <Link
+                to="/signup"
+                style={{
+                    marginLeft: "6px",
+                    color: "#2563eb",
+                    fontWeight: "500",
+                    textDecoration: "none"
+                }}
+            >
+                Sign Up
+            </Link>
+        </span>
+    </form>
+
+    <ToastContainer />
+</div>
+
     )
 }
 
